@@ -1,7 +1,26 @@
 {{page-title "ECommerce"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<body>
+    <header>
+        <h1>Welcome to E commerce </h1>
+        <h3>Here u can buy amazing phones in affordable prices</h3>
+    </header>
+    <div id="lists">
+        <LinkTo @route="items">
+            <button class="btn">View Gallery</button>
+        </LinkTo>
+        <LinkTo @route="add-item">
+            <button class="btn"> Add item</button>
+        </LinkTo>
 
-{{outlet}}
+    </div>
+    {{outlet}}
+
+    <footer>
+        <address>
+            <p>Contact : 9835667351</p>
+            <p>Email : ecommerce@amazon.com</p>
+
+        </address>
+    </footer>
+</body>

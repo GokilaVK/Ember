@@ -1,0 +1,33 @@
+{{page-title "Items"}}
+
+
+
+{{!-- <div id="items" class="d-flex justify-content-around">
+    <div>
+        {{#each @model as |item|}}
+        <div>
+            <LinkTo @route="items.item" @model={{item}}>{{item.name}}</LinkTo>
+        </div>
+        {{/each}}
+    </div>
+
+    
+</div>
+--}}
+
+
+<div class="container d-flex">
+    <div class="card" style="width: 300px;">
+        <div class="card-body">
+            <h3 class="card-title">List of Products</h3>
+            {{#each @model as |item|}}
+            <div class="card-text">
+                <LinkTo @route="items.item" @model={{item}}>{{item.name}}</LinkTo>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="ml-5">
+        {{outlet}}
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{{page-title "AddItem"}}
+
+
+
+<form id="form">
+    <label>Name</label>
+    <Input @type="text" />
+    <br><br>
+    <label>Brand : </label>
+    <select name="brandName">
+        <option value="redmi">Redmi</option>
+        <option value="realmi">Realmi</option>
+        <option value="oppo">Oppo</option>
+        <option value="samsung">Samsung</option>
+        <option value="vivo">Vivo</option>
+        <option value="nokia">Nokia</option>
+    </select>
+    <br><br>
+    <label>Rate : </label>
+    <Input @type="text" />
+    <br><br>
+   <LinkTo @route="index"><button class="btn">Add</button></LinkTo> 
+</form>
