@@ -4,20 +4,21 @@
 
 <form id="form">
     <label>Name</label>
-    <Input @type="text" />
+    <Input @type="text" @value={{this.name}}/>
     <br><br>
     <label>Brand : </label>
-    <select name="brandName">
-        <option value="redmi">Redmi</option>
-        <option value="realmi">Realmi</option>
-        <option value="oppo">Oppo</option>
-        <option value="samsung">Samsung</option>
-        <option value="vivo">Vivo</option>
-        <option value="nokia">Nokia</option>
+    <select name="brandName" onchange={{action (mut this.selectedbrand) value='target.value'}}>
+    {{#each this.brand as |brand|}}
+        <option>{{brand}}</option>
+    {{/each}}
     </select>
     <br><br>
     <label>Rate : </label>
-    <Input @type="text" />
+    <Input @type="text" @value={{this.rate}}/>
     <br><br>
-   <LinkTo @route="index"><button class="btn">Add</button></LinkTo> 
+    <label>Released on : </label>
+    <Input @type="text" @value = {{this.released}}/>
+    <br><br>
+  <button class="btn" {{action 'addRecord'}}>Add</button>
+  
 </form>

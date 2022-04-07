@@ -1,18 +1,23 @@
 {{page-title "Item"}}
-{{!--
-<div>
-    <h3>Name : {{this.model.name}}</h3>
-    <p>Brand : {{this.model.brand}}</p>
-    <p>Rate : {{this.model.rate}}</p>
-    <p>Released on : {{this.model.released}}</p>
-</div> --}}
+
 
 
 <div class="card" style="width: 500px;">
     <div class="card-body">
-        <h3 class="card-title">Name : {{this.model.name}}</h3>
+        <h4 class="d-inline-block card-title">Name : {{this.model.name}}</h4>
+        <button class="btn-sm float-right" {{action "editRate"}}>Edit</button>
         <p class="card-text">Brand : {{this.model.brand}}</p>
         <p class="card-text">Rate : {{this.model.rate}}</p>
-        <p class="card-text">Released : {{this.model.released}}</p>
+        
+        {{#if this.editRateValue}}
+            <Input @type="text" @value={{this.newRate}}/>
+            <button class="btn-sm" {{action 'editRecord' this.model.id}}>Save</button>
+            <button class="btn-sm" {{action 'close'}}>x</button>
+        {{/if}}  
+           
+        <p class="card-text">Released on : {{this.model.released}}</p>
+
+        
+           
     </div>
 </div>

@@ -1,2 +1,48 @@
 
 @import "ember-bootstrap/bootstrap";
+:root {
+    --margin : 0px 500px;
+}
+
+body {
+    background-color: rgb(220, 253, 253);
+}
+
+h1 {
+    color : blue;
+}
+
+#items , form {
+    margin: var(--margin);
+    border: 1px solid ;
+    padding : 20px;
+    box-shadow: 10px 15px 10px grey;
+}
+
+header , footer {
+    text-align: center;
+}
+
+footer {
+    border: 1px solid;
+    margin: 20px 500px;
+    box-shadow: 10px 15px 10px grey;
+}
+
+.btn {
+    padding : 10px;
+    box-shadow: 5px 5px 5px red;
+    margin : 20px;
+    border: 1px solid;
+}
+
+#lists {
+    text-align: center;
+
+}
+
+#link {
+    display: inline-block;
+    margin : 9px;
+}
+
